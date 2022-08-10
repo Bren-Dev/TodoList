@@ -10,8 +10,8 @@ type Props = {
   deleteTask(DeleteTaskById: number): void;
   tasks: any;
   setTasks: any;
-  searchText: any;
-  filterButton: any;
+  searchText: string;
+  filterButton: string;
 };
 
 export const Todolist = ({
