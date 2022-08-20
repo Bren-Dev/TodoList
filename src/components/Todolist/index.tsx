@@ -1,10 +1,11 @@
+import { useEffect, useState } from "react";
+
+import ContainerList from "../ContainerList";
 import {
   WrapperTodolist,
   WrapperTodolistDone,
   WrapperTodolistTodo,
 } from "./styles";
-import { useEffect, useState } from "react";
-import ContainerList from "../ContainerList";
 
 type Props = {
   deleteTask(DeleteTaskById: number): void;

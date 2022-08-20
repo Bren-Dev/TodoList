@@ -1,11 +1,12 @@
+import { BsExclamationLg } from "react-icons/bs";
+import { IoTrashOutline } from "react-icons/io5";
+
 import {
   TitleTask,
   DivIcons,
   DivIconExclamation,
   DivIconTrash,
 } from "./styles";
-import { BsExclamationLg } from "react-icons/bs";
-import { IoTrashOutline } from "react-icons/io5";
 
 const ContainerList = ({
   childrenTask,

@@ -1,10 +1,11 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 type ContainerProps = {
-    done: boolean;
-}
+  done: boolean;
+};
 
-export const WrapperTodolist = styled.div(( {done}: ContainerProps ) => (
+export const WrapperTodolist = styled.div(
+  ({ done }: ContainerProps) =>
     `
     width: 100%;
     background-color: white;
@@ -15,12 +16,13 @@ export const WrapperTodolist = styled.div(( {done}: ContainerProps ) => (
     justify-content: space-between;
     align-items: center;
     padding: 16px 20px;
-        text-decoration: ${done ? 'line-through' : 'none'};
-        opacity: ${done ? '0.5' : '1'}
+        text-decoration: ${done ? "line-through" : "none"};
+        opacity: ${done ? "0.5" : "1"}
     `
-))
+);
 
-export const WrapperTodolistTodo = styled.div(( {done}: ContainerProps ) => (
+export const WrapperTodolistTodo = styled.div(
+  ({ done }: ContainerProps) =>
     `
     width: 100%;
     background-color: white;
@@ -31,12 +33,13 @@ export const WrapperTodolistTodo = styled.div(( {done}: ContainerProps ) => (
     justify-content: space-between;
     align-items: center;
     padding: 16px 20px;
-        display: ${done ? 'none' : 'flex'};
-        visibility:${done ? 'hidden' : 'normal'}
+        display: ${done ? "none" : "flex"};
+        visibility:${done ? "hidden" : "normal"}
     `
-))
+);
 
-export const WrapperTodolistDone = styled.div(( {done}: ContainerProps ) => (
+export const WrapperTodolistDone = styled.div(
+  ({ done }: ContainerProps) =>
     `
     width: 100%;
     background-color: white;
@@ -47,9 +50,9 @@ export const WrapperTodolistDone = styled.div(( {done}: ContainerProps ) => (
     justify-content: space-between;
     align-items: center;
     padding: 16px 20px;
-        text-decoration: ${done ? 'line-through' : 'none'};
-        opacity: ${done ? '0.5' : '1'};
-        display: ${done ? 'flex' : 'none'};
-        visibility:${done ? 'flex' : 'none'}
+        text-decoration: ${done ? "line-through" : "none"};
+        opacity: ${done ? "0.5" : "1"};
+        display: ${done ? "flex" : "none"};
+        visibility:${done ? "flex" : "none"}
     `
-))
+);
