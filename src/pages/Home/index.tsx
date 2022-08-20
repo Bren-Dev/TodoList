@@ -1,4 +1,7 @@
 import { useState } from "react";
+
+import Input from "../../components/Input";
+import Todolist from "../../components/Todolist";
 import {
   Container,
   TodoParagraph,
@@ -8,8 +11,6 @@ import {
   WrapperButtons,
   ButtonAdd,
 } from "./styles";
-import Input from "../../components/Input";
-import Todolist from "../../components/Todolist";
 
 const Home = () => {
   const [searchText, setSearchText] = useState("");
