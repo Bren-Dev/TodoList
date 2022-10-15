@@ -8,14 +8,10 @@ import {
   DivIconTrash,
 } from "./styles";
 
-const ContainerList = ({
-  childrenTask,
-  functionCheck,
-  functionDelete,
-}: any) => {
+const ContainerList = ({ taskName, functionCheck, functionDelete }: any) => {
   return (
     <>
-      <TitleTask>{childrenTask}</TitleTask>
+      <TitleTask>{taskName}</TitleTask>
       <DivIcons>
         <DivIconExclamation onClick={functionCheck}>
           <BsExclamationLg />

@@ -8,7 +8,7 @@ import {
 } from "./styles";
 
 type Props = {
-  deleteTask(DeleteTaskById: number): void;
+  deleteTask(DeletedId: number): void;
   tasks: any;
   setTasks: any;
   searchText: string;
@@ -45,7 +45,7 @@ export const Todolist = ({
       ? filteredList.map((task: any, index: number) => (
           <WrapperTodolist done={task.done} key={`${task.name}/${index}`}>
             <ContainerList
-              childrenTask={task.name}
+              taskName={task.name}
               functionDelete={() => deleteTask(task.id)}
               functionCheck={() => {
                 handleCheck(index);
@@ -56,7 +56,7 @@ export const Todolist = ({
       : tasks.map((task: any, index: number) => (
           <WrapperTodolist done={task.done} key={`${task.name}/${index}`}>
             <ContainerList
-              childrenTask={task.name}
+              taskName={task.name}
               functionDelete={() => deleteTask(task.id)}
               functionCheck={() => {
                 handleCheck(index);
@@ -69,7 +69,7 @@ export const Todolist = ({
       ? filteredList.map((task: any, index: number) => (
           <WrapperTodolistTodo done={task.done} key={`${task.name}/${index}`}>
             <ContainerList
-              childrenTask={task.name}
+              taskName={task.name}
               functionDelete={() => deleteTask(task.id)}
               functionCheck={() => {
                 handleCheck(index);
@@ -80,7 +80,7 @@ export const Todolist = ({
       : tasks.map((task: any, index: number) => (
           <WrapperTodolistTodo done={task.done} key={`${task.name}/${index}`}>
             <ContainerList
-              childrenTask={task.name}
+              taskName={task.name}
               functionDelete={() => deleteTask(task.id)}
               functionCheck={() => {
                 handleCheck(index);
@@ -92,7 +92,7 @@ export const Todolist = ({
     ? filteredList.map((task: any, index: number) => (
         <WrapperTodolistDone done={task.done} key={`${task.name}/${index}`}>
           <ContainerList
-            childrenTask={task.name}
+            taskName={task.name}
             functionDelete={() => deleteTask(task.id)}
             functionCheck={() => {
               handleCheck(index);
@@ -100,10 +100,10 @@ export const Todolist = ({
           />
         </WrapperTodolistDone>
       ))
-    : tasks.map((task: any, index: any) => (
+    : tasks.map((task: any, index: number) => (
         <WrapperTodolistDone done={task.done} key={`${task.name}/${index}`}>
           <ContainerList
-            childrenTask={task.name}
+            taskName={task.name}
             functionDelete={() => deleteTask(task.id)}
             functionCheck={() => {
               handleCheck(index);
